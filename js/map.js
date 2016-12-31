@@ -10,13 +10,14 @@ var markerimage = {
 
 function initMap() {
 
-  var uluru = {lat: 37.544935, lng:  127.039454};
+  var seoulforest = {lat: 37.544935, lng:  127.039454};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
-    center: uluru
+    center: seoulforest,
+    scrollwheel: false,
   });
   var marker = new google.maps.Marker({
-    position: uluru,
+    position: seoulforest,
     map: map,
     icon: markerimage
   });
