@@ -24,6 +24,12 @@
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUCWBiWilqVGMV2P0ILQVPt6ISat2Dm9Y&libraries=places&v=3.20&sensor=false">
+    </script>
+
+    <script src="js/map.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -400,8 +406,8 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
                     <h6 class="section-subheading text-muted"style="color:#ffffff;margin:50px;line-height:23px;">Location<br> <br>
-서울 성동구 왕십리로 63<br>언더스탠드에비뉴 파워스탠드 2층</h6>
-                    <div id="map" style="width:100%;height:400px;background:yellow"></div>
+                      서울 성동구 왕십리로 63<br>언더스탠드에비뉴 파워스탠드 2층</h6>
+                    <div id="map" style="width:100%;height:400px;"></div>
                 </div>
             </div>
 
@@ -414,7 +420,7 @@
 
                             <div class="col-lg-12 text-center">
                                    <h4 class="section-subheading text-muted"style="color:#ffffff;margin:50px;line-height:30px;">
-Email<br>cgs9623@nate.com</h4>
+                                    Email<br>cgs9623@nate.com</h4>
                                 <div id="success"></div>
                                 <button type="submit" class="btn btn-xl">Send EMAIL</button>
                             </div>
@@ -679,19 +685,12 @@ When donations are made, a cuddly baby monk puts his hands together and prays, w
 
     <script src="js/graphics.js"></script>
 
-    <script src="js/number.js"></script>
-    <script>
+    <script src="js/number.js"></script
 
- function myMap() {
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(37.543707, 127.044585),
-        zoom: 17
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-}
+
+    <script>
+      //initMap();
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>
