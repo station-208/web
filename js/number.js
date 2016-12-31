@@ -8,14 +8,17 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
-var counter = 0;
-for(var i = 0; i < number; ++i) {
-  (function(index) {
-    setTimeout(function() {
-      counter++;
-      $('#funds').text(numberWithCommas(counter));
 
-    }, i * 1);
-  })(i)
 
-}
+$(document).ready(function() {
+  var counter = 0;
+  for(var i = 0; i < number; ++i) {
+    (function(index) {
+      setTimeout(function() {
+        counter++;
+        $('#funds').text(numberWithCommas(counter));
+
+      }, i * 1);
+    })(i)
+  }
+});

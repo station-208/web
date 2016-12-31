@@ -1,11 +1,11 @@
 var map;
 
 var markerimage = {
-  url: 'img/map/marker.png',
-  size: new google.maps.Size(31,50),
+  url: 'img/map/mark.png',
+  size: new google.maps.Size(217,352),
   origin: new google.maps.Point(0, 0),
   anchor: new google.maps.Point(16,50),
-  scaledSize: new google.maps.Size(31, 50)
+  scaledSize: new google.maps.Size(32, 50)
 };
 
 function initMap() {

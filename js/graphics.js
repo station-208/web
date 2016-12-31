@@ -1,15 +1,20 @@
 
-			var containerx, stats;
-			var camera, scene, renderer, group, particle;
-			var mouseX = 0, mouseY = 0;
+var containerx, stats;
+var camera, scene, renderer, group, particle;
+var mouseX = 0, mouseY = 0;
 
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
 
-			init();
-			animate();
 
-			function init() {
+
+$(document).ready(function() {
+
+	init();
+	animate();
+});
+
+function init() {
 
 				containerx = document.createElement( 'div' );
 				document.body.appendChild( containerx );
@@ -60,41 +65,31 @@
 
 			}
 
-			function onWindowResize() {
+function onWindowResize() {
 
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-				camera.aspect = window.innerWidth / 950;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, 950);
-
-			}
+	windowHalfX = window.innerWidth / 2;
+	windowHalfY = window.innerHeight / 2;
+	camera.aspect = window.innerWidth / 950;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, 950);
+}
 
 			//
 
 
 			//
 
-			function animate() {
+function animate() {
+	requestAnimationFrame( animate );
+	render();
+}
 
-				requestAnimationFrame( animate );
+function render() {
 
-				render();
-
-
-			}
-
-			function render() {
-
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
-				camera.lookAt( scene.position );
-
-				group.rotation.x += 0.01;
-				group.rotation.y += 0.02;
-
-				renderer.render( scene, camera );
-
-			}
+	camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+	camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+	camera.lookAt( scene.position );
+	group.rotation.x += 0.01;
+	group.rotation.y += 0.02;
+	renderer.render( scene, camera );
+}
