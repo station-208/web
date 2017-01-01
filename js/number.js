@@ -21,4 +21,6 @@ $(document).ready(function() {
       }, i * 1);
     })(i)
   }
+
+  console.log("밥 먹고 싶다.".split(" "));
 });

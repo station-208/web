@@ -36,7 +36,7 @@ function init() {
 				group = new THREE.Group();
 				scene.add( group );
 
-				for ( var i = 0; i < 60; i++ ) {
+				for ( var i = 0; i < 30; i++ ) {
 
 					var material = new THREE.SpriteCanvasMaterial( {
 						color: 0xff6f6f,
@@ -47,7 +47,7 @@ function init() {
 					particle.position.x = Math.random() * 2000 - 1000;
 					particle.position.y = Math.random() * 2000 - 1000;
 					particle.position.z = Math.random() * 2000 - 1000;
-					particle.scale.x = particle.scale.y = Math.random() * 20 + 10;
+					particle.scale.x = particle.scale.y = Math.random() * 50 + 10;
 					group.add( particle );
 				}
 
