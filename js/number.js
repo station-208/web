@@ -22,5 +22,5 @@ $(document).ready(function() {
     })(i)
   }
 
-  console.log("밥 먹고 싶다.".split(" "));
+
 });
