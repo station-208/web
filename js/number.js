@@ -8,15 +8,25 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
-
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 $(document).ready(function() {
   var counter = 0;
-  for(var i = 0; i < number; ++i) {
+  for(var i = 1; i < number / 100; ++i) {
     (function(index) {
       setTimeout(function() {
-        counter++;
-        $('#funds').text(numberWithCommas(counter));
+        counter += 100;
+        
+        if(counter / 100 == parseInt(number / 100)) {
+          $('#funds').text(numberWithCommas(counter + number % 100));
+          console.log("Finished!");
+        } else {
+          $('#funds').text(numberWithCommas(counter + getRandomArbitrary(1, 100)));
+        }
+
+
 
       }, i * 1);
     })(i)
